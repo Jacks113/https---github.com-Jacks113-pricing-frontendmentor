@@ -1,0 +1,302 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  background: url("../public/images/bg-top.svg") right top no-repeat, url(../public/images/bg-bottom.svg) bottom left no-repeat;
+}
+
+/* Slider switch */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(237, 63%, 64%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggleText{
+  font-size: 1.5em;
+}
+
+.textRight{
+  margin-left: 1em;
+}
+
+.textLeft{
+  padding-right: 1em;
+}
+
+.active-text{
+  color: hsl(237, 63%, 64%);
+}
+
+.inactive-text{
+  color: hsl(234, 14%, 74%);
+}
+
+.toggleContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.App h1{
+  color: hsl(233, 13%, 49%);
+}
+
+/* container for the prices and packages */
+
+.price-packages{
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* container for the divs of the pricing component and styles */
+.pricing-container {
+  margin: 3em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+}
+
+
+.pricing-container hr{
+  width: 80%;
+  margin: auto;
+  opacity: 0.3;
+}
+
+/* individual divs of the prices and styles */
+
+.price-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  height: 80%;
+  border-radius: 1.7em;
+  background-color: hsl(240, 78%, 98%);
+  box-shadow: 3px 3px 10px rgba(179, 181, 198, 0.5);
+}
+
+.price-card:nth-of-type(2){
+  height: 90%;
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: whitesmoke;
+}
+
+.price-card:nth-of-type(2) .link:hover{
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+}
+
+
+/* text styles for the pricing components */
+
+.price-card:nth-of-type(2) h3, .price-card:nth-of-type(2) h2{
+  color: whitesmoke;
+}
+
+
+.price-card:nth-of-type(2) .link:hover a{
+  color: whitesmoke;
+}
+
+.price-card:nth-of-type(2) .link:hover{
+  background-color:hsl(237, 63%, 64%);
+  border: 2px solid whitesmoke;
+}
+
+.price-card:nth-of-type(2) .link{
+  background-image: none;
+  background-color: whitesmoke;
+  border: none
+}
+
+.price-card:nth-of-type(2) .link a{
+  color: hsl(237, 63%, 64%);
+}
+
+
+
+.whiteText{
+  color:  hsl(240, 78%, 98%);
+  font-size: 1.7em;
+}
+
+.price-card h2{
+  color: hsl(232, 13%, 33%);
+  font-size: 1.5em;
+}
+
+.price-card h3 b{
+  color: black;
+  font-size: 1.7em;
+}
+
+.price-card h3 {
+  color: black;
+  font-size: 2.2em;
+}
+
+.card-text{
+  width: 90%;
+}
+
+.price{
+  font-size: 1.7em;
+}
+
+/* link stylisations */
+
+.link{
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    padding: 0.7em;
+    border-radius: 5px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.link a{
+  display: inline-block;
+  text-decoration: none;
+  color: whitesmoke;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  background-image: none;
+  background-color: transparent;
+  border: 2px solid hsl(236, 72%, 79%);
+}
+
+.link:hover a {
+  color: hsl(236, 72%, 79%);
+}
+
+
+ .selected.price-card:hover .link:hover{
+  background-image: none;
+  background-color:transparent;
+  border: 0.5px solid whitesmoke;
+}
+
+.selected .price-card:hover .link:hover a{
+  color: whitesmoke;
+
+}
+
+/* responsiveness */
+
+@media only screen and  (max-width: 1000px){
+  body{
+    font-size: 12px;
+  }
+
+  .price-packages{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:700px) {
+  .pricing-container{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .price-card{
+    width: 80vw;
+    margin: 1vw 0; 
+    height: 400px;
+  }
+}
+
+@media only screen and (max-height:650px) {
+  .pricing-container{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .price-card{
+    width: 80vw;
+    margin: 1vw 0; 
+    height: 400px;
+  }
+}

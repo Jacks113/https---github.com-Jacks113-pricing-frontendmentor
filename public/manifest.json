@@ -1,0 +1,17 @@
+{
+  "short_name": "Jack-pricing-component",
+  "name": "pricing component, challenge from front end mentor",
+  "icons": [
+    {
+      "url":"pricing-frontendmentor/public/images/bg-top.svg"
+    },
+    {
+      "url":"pricing-frontendmentor/public/images/bg-bottom.svg"
+    },
+    {
+      "url":"pricing-frontendmentor/public/images/favicon-32x32.png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
